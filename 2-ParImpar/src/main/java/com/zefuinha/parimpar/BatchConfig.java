@@ -38,7 +38,10 @@ public class BatchConfig {
 				// Nome do Step
 				.get("imprimeParImparStep")
 				// Tipo Chunk: <Leitura, Escrita>chunk(tamanho)
-				.<Integer, String>chunk(1)
+				// Tamanho: Até quantos itens podem ser armazenados na memória para cada pedaço.
+				// Isso vai depender da memória, e de quantos pedaços vc está disposto a perder em caso de falha.
+				// Neste exemplo, por serem 10 números, vamos dividir os commits ao banco de dados pela metade
+				.<Integer, String>chunk(5)
 				// Leitor
 				.reader(contaAteDezReader())
 				// Processador
