@@ -1,4 +1,4 @@
-package com.zefuinha.parimpar.config;
+package com.zefuinha.fileflatlargurafixa.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,3 +23,4 @@ public class PropsConfig {
 	}
 	
 }
+

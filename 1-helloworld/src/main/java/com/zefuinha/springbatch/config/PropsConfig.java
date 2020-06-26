@@ -17,7 +17,7 @@ public class PropsConfig {
 		PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
 		
 		// Define onde está o arquivo de configuração do Batch
-		configurer.setLocation(new FileSystemResource("../application.properties"));
+		configurer.setLocation(new FileSystemResource("../application.multiplebd.properties"));
 		
 		return configurer;
 	}
