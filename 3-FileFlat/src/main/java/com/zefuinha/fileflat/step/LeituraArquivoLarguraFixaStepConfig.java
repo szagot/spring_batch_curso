@@ -21,6 +21,7 @@ public class LeituraArquivoLarguraFixaStepConfig {
 			ItemWriter<Cliente> leituraArquivoLarguraFixaWriter) {
 		return step
 				.get("leituraArquivoLarguraFixaStep")
+				// Chunk criado para cada registro. Se ocorrer um erro, ele continua a partir do registro com erro  
 				.<Cliente, Cliente>chunk(1)
 				.reader(leituraArquivoLarguraFixaReader)
 				.writer(leituraArquivoLarguraFixaWriter)

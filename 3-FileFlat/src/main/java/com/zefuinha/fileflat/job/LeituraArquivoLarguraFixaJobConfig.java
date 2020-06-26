@@ -21,7 +21,8 @@ public class LeituraArquivoLarguraFixaJobConfig {
 		return job
 				.get("leituraArquivoLarguraFixaJob")
 				.start(leituraArquivoLarguraFixaStep)
-				.incrementer(new RunIdIncrementer())
+				// Removido o incremento de ID para garantir que o arquivo será lido só uma vez 
+				//.incrementer(new RunIdIncrementer())
 				.build();
 	}
 
