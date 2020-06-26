@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import com.zefuinha.fileflat.dominio.Cliente;
 
 @Configuration
-public class LeituraArquivoLarguraFixaStep {
+public class LeituraArquivoLarguraFixaStepConfig {
 
 	@Autowired
 	private StepBuilderFactory step;

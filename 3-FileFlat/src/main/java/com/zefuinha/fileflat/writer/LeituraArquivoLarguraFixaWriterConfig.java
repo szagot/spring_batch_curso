@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import com.zefuinha.fileflat.dominio.Cliente;
 
 @Configuration
-public class LeituraArquivoLarguraFixaWriter {
+public class LeituraArquivoLarguraFixaWriterConfig {
 
 	@Bean
 	public ItemWriter<Cliente> leituraArquivoLarguraFixaWriter(){
