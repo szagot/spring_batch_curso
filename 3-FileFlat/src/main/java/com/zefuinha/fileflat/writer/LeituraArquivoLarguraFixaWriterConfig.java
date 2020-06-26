@@ -11,6 +11,16 @@ public class LeituraArquivoLarguraFixaWriterConfig {
 
 	@Bean
 	public ItemWriter<Cliente> leituraArquivoLarguraFixaWriter(){
-		return items -> items.forEach(System.out::println);
+//		return items -> items.forEach(System.out::println);
+		return items -> {
+			for(Cliente cliente: items) {
+				// Se o nome do cliente for Maria, simula uma falha
+				if(cliente.getNome().equals("Maria")) {
+					throw new Exception();
+				} else {
+					System.out.println(cliente);
+				}
+			}
+		};
 	}
 }
