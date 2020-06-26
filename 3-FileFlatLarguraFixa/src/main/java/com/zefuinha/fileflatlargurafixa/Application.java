@@ -1,4 +1,4 @@
-package com.zefuinha.fileflat;
+package com.zefuinha.fileflatlargurafixa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

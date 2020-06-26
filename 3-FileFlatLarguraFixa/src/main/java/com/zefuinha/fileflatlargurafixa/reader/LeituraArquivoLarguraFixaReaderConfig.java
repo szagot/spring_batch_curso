@@ -1,4 +1,4 @@
-package com.zefuinha.fileflat.reader;
+package com.zefuinha.fileflatlargurafixa.reader;
 
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.file.FlatFileItemReader;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 
-import com.zefuinha.fileflat.dominio.Cliente;
+import com.zefuinha.fileflatlargurafixa.dominio.Cliente;
 
 @Configuration
 public class LeituraArquivoLarguraFixaReaderConfig {

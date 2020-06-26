@@ -1,4 +1,4 @@
-package com.zefuinha.fileflat.job;
+package com.zefuinha.fileflatlargurafixa.job;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;

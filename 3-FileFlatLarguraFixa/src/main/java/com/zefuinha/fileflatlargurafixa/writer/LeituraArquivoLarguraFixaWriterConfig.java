@@ -1,10 +1,10 @@
-package com.zefuinha.fileflat.writer;
+package com.zefuinha.fileflatlargurafixa.writer;
 
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.zefuinha.fileflat.dominio.Cliente;
+import com.zefuinha.fileflatlargurafixa.dominio.Cliente;
 
 @Configuration
 public class LeituraArquivoLarguraFixaWriterConfig {

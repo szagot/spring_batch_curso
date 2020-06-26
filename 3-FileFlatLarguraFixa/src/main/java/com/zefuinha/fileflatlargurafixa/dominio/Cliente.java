@@ -1,4 +1,4 @@
-package com.zefuinha.fileflat.dominio;
+package com.zefuinha.fileflatlargurafixa.dominio;
 
 public class Cliente {
 	private String nome;

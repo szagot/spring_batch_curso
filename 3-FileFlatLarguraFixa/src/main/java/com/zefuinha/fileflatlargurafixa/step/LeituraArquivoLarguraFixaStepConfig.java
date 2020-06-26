@@ -1,4 +1,4 @@
-package com.zefuinha.fileflat.step;
+package com.zefuinha.fileflatlargurafixa.step;
 
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.zefuinha.fileflat.dominio.Cliente;
+import com.zefuinha.fileflatlargurafixa.dominio.Cliente;
 
 @Configuration
 public class LeituraArquivoLarguraFixaStepConfig {
