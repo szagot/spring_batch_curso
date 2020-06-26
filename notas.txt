@@ -1,0 +1,15 @@
+Tipos de leitores de arquivo no Batch
+
+1) Flat: Arquivos que possuem dados não estruturados
+    Componentes: 
+        FlatFileItemReader
+            LineMapper
+                LineTokenizer: Obtém os tokens (palavras) da linha
+                FieldSetMapper: Mapeia os tokens em objeto de dominio
+
+        MultiResourceItemReader: Leitura de múltiplos arquivos, para arquivos muito grandes
+
+    Os arquivos do tipo flat podem ter dados com:
+        • Colunas fixas: onde cada coluna tem sempre o mesmo número de caracteres
+        • Delimitado: onde as colunas são separadas por um caracter delimitador
+        • Múltiplos formatos: onde cada linha tem um padrão diferente (usando múltiplos LineMapper's)        
