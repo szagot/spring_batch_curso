@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.zefuinha.fileflatmultiplosformatos.reader.ArquivoClienteTransacaoReader;
+
 @Configuration
 public class ArquivosMultiplosFormatosStepConfig {
 
@@ -19,7 +21,8 @@ public class ArquivosMultiplosFormatosStepConfig {
 		return step
 				.get("arquivosMultiplosFormatosStep")
 				.chunk(1)
-				.reader(reader)
+				// Leitor especializado em inserir as transações no cliente
+				.reader(new ArquivoClienteTransacaoReader(reader))
 				.writer(writer)
 				.build();
 	}
