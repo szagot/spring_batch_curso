@@ -3,6 +3,9 @@ package com.zefuinha.fileflatmultiplosformatos.reader;
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.batch.item.ItemStreamException;
 import org.springframework.batch.item.ItemStreamReader;
+import org.springframework.batch.item.file.FlatFileItemReader;
+import org.springframework.batch.item.file.ResourceAwareItemReaderItemStream;
+import org.springframework.core.io.Resource;
 
 import com.zefuinha.fileflatmultiplosformatos.dominio.Cliente;
 import com.zefuinha.fileflatmultiplosformatos.dominio.Transacao;
@@ -13,18 +16,19 @@ import com.zefuinha.fileflatmultiplosformatos.dominio.Transacao;
  * @author szago
  *
  */
-public class ArquivoClienteTransacaoReader implements ItemStreamReader<Cliente> {
+public class ArquivoClienteTransacaoReader
+		implements ItemStreamReader<Cliente>, ResourceAwareItemReaderItemStream<Cliente> {
 
 	// Objeto que está sendo lido
 	private Object objetoAtual;
 
 	// Objeto para delegar a função de leitura
-	private ItemStreamReader<Object> delegate;
+	private FlatFileItemReader<Object> delegate;
 
 	/**
 	 * Construtor para delegar a leitura dos objetos ao leitor já existente
 	 */
-	public ArquivoClienteTransacaoReader(ItemStreamReader<Object> delegate) {
+	public ArquivoClienteTransacaoReader(FlatFileItemReader<Object> delegate) {
 		this.delegate = delegate;
 	}
 
@@ -72,6 +76,11 @@ public class ArquivoClienteTransacaoReader implements ItemStreamReader<Cliente> 
 		objetoAtual = delegate.read();
 
 		return objetoAtual;
+	}
+
+	@Override
+	public void setResource(Resource resource) {
+		delegate.setResource(resource);
 	}
 
 }
