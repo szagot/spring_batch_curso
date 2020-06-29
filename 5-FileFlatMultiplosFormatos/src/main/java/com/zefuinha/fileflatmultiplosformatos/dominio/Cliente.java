@@ -1,10 +1,14 @@
 package com.zefuinha.fileflatmultiplosformatos.dominio;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cliente {
 	private String nome;
 	private String sobrenome;
 	private String idade;
 	private String email;
+	private List<Transacao> transacoes = new ArrayList<>();
 
 	public String getNome() {
 		return nome;
@@ -37,11 +41,16 @@ public class Cliente {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	public List<Transacao> getTransacoes() {
+		return transacoes;
+	}
 
 	@Override
 	public String toString() {
 		return "Cliente{" + "nome='" + nome + "'" + ", sobrenome ='" + sobrenome + "'" + ", idade='" + idade + "'"
-				+ ", email='" + email + "'" + '}';
+				+ ", email='" + email + "'" + '}'
+				+ (transacoes.isEmpty() ? "" : transacoes);
 	}
 
 }
