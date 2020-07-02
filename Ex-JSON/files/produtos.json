@@ -1,0 +1,37 @@
+[
+	{
+		"id": 25,
+		"nome": "Produto de teste 1",
+		"valor": 99.98
+	},
+	{
+		"id": 27,
+		"nome": "Produto de teste 2",
+		"valor": 88.99
+	},
+	{
+		"id": 30,
+		"nome": "Produto de teste 3",
+		"valor": 777.87
+	},
+	{
+		"id": 31,
+		"nome": "Produto de teste 4",
+		"valor": 623.87
+	},
+	{
+		"id": 32,
+		"nome": "Produto de teste 5",
+		"valor": 27.2
+	},
+	{
+		"id": 37,
+		"nome": "Produto de teste 6",
+		"valor": 43.3
+	},
+	{
+		"id": 40,
+		"nome": "Produto de teste 7",
+		"valor": 50.55
+	}
+]
