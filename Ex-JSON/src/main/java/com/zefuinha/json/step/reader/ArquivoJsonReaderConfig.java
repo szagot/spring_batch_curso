@@ -20,6 +20,8 @@ public class ArquivoJsonReaderConfig {
 		return new JsonItemReaderBuilder<Produto>()
 				.name("ArquivoJsonReader")
 				.jsonObjectReader(new JacksonJsonObjectReader<>(Produto.class))
+				// https://docs.spring.io/spring-batch/docs/current/reference/html/index-single.html#jsonReadingWriting
+				// Usando FileSystemResource ao invés de ClassPathResource porque o arquivonão está na raiz do projeto
 				.resource(new FileSystemResource(path))
 				.build();
 	}
