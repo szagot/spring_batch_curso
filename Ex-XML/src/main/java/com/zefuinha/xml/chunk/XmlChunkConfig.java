@@ -17,9 +17,9 @@ public class XmlChunkConfig {
 	private StepBuilderFactory step;
 	
 	@Bean
-	public Step XmlChunk(StaxEventItemReader<Document> reader, ItemWriter<Document> writer) {
+	public Step xmlChunk(StaxEventItemReader<Document> reader, ItemWriter<Document> writer) {
 		return step
-				.get("XmlChunk")
+				.get("xmlChunk")
 				.<Document, Document>chunk(1)
 				.reader(reader)
 				.writer(writer)

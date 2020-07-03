@@ -10,7 +10,7 @@ import com.zefuinha.xml.dominio.Document;
 public class XmlWriterConfig {
 
 	@Bean
-	public ItemWriter<Document> XmlWriter() {
+	public ItemWriter<Document> xmlWriter() {
 		return document -> document.forEach(System.out::println);
 	}
 

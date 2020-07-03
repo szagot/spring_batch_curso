@@ -16,9 +16,9 @@ public class XmlJobConfig {
 	private JobBuilderFactory job;
 	
 	@Bean
-	public Job XmlJob(Step step) {
+	public Job xmlJob(Step step) {
 		return job
-				.get("XmlJob")
+				.get("xmlJob")
 				.start(step)
 				.build();
 	}

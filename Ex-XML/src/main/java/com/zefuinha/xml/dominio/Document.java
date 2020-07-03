@@ -5,10 +5,10 @@ import lombok.Data;
 @Data
 public class Document {
 	
-	private String vendorId;
-	private String docTypeId;
-	private String accNo;
-	private String stmtDate;
-	private CustData customer;
+	private String VendorId;
+	private String DocTypeId;
+	private String AccNo;
+	private String StmtDate;
+	private CustData CustData;
 			
 }
