@@ -10,5 +10,8 @@ public class Document {
 	private String AccNo;
 	private String StmtDate;
 	private CustData CustData;
+	private String PayDetails;
+	private String NumberOfPages;
+	private String Skipped;
 			
 }
