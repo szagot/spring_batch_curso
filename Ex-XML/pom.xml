@@ -16,7 +16,7 @@
 	<description>Treinando XML</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 
 	<dependencies>
@@ -52,10 +52,15 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--  Necessário para leitura de XML -->
+		<!-- Necessário para leitura de XML -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-oxm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.4.12</version>
 		</dependency>
 
 	</dependencies>
