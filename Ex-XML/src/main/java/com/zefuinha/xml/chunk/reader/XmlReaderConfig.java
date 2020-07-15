@@ -14,8 +14,6 @@ import com.zefuinha.xml.dominio.CustData;
 import com.zefuinha.xml.dominio.Document;
 
 /**
- * TODO: Está igual à documentação, porém não funciona. Mesmo colocando o mesmo arquivo e o mesmos leitores.
- * 
  * https://docs.spring.io/spring-batch/docs/current/reference/html/index-single.html#xmlReadingWriting
  */
 
@@ -58,7 +56,6 @@ public class XmlReaderConfig {
 		Map<Class<?>,String> implicitCollections = new HashMap<Class<?>, String>();
 		implicitCollections.put(CustData.class, "Addrs");
 	 
-		
 		XStreamMarshaller marshaller = new XStreamMarshaller();
 
 		// Aqui adiciona a coleção implícita

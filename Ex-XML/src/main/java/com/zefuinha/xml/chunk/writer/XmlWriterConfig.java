@@ -11,7 +11,8 @@ public class XmlWriterConfig {
 
 	@Bean
 	public ItemWriter<Document> xmlWriter() {
-		return document -> document.forEach(System.out::println);
+		// Imprimindo apenas número da conta
+		return documents -> documents.forEach(document -> System.out.println(document.getAccNo()));
 	}
 
 }
