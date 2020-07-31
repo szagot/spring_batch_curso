@@ -23,6 +23,14 @@ public class JdbcChunkConfig {
 				.<Cliente, Cliente>chunk(1)
 				.reader(reader)
 				.writer(writer)
+				
+				// Configurando tolerancia de falhas
+				.faultTolerant()
+				// Qual exceção será ignorada
+				.skip(Exception.class)
+				// Até quantas exceções serão ignoradas?
+				.skipLimit(2)
+				
 				.build();
 	}
 	
